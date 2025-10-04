@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fass</title>
+    <style>
+          body{
+            margin:0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='background.avif') }}"); 
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="'image">
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#"  class="login">Login</a></li>
+                </ul>
+            
+        </nav>
+        </div>
+    </div>
+    <div class="welcome">
+        <div class="firstLine">
+            <h1>
+                Your Feedback Matters!
+            </h1>
+        </div>
+        <form action="/user" method="post">
+            <button class="goButton" type="submit">
+            Let's Go
+            </button>
+        </form>
+
+    </div>
+   
+    
+`

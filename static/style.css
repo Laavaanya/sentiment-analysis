@@ -1,0 +1,297 @@
+
+
+.header{   
+    display:flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+img{
+    margin-top: 3px;
+    width:190px;
+    height: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    margin:0 20px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: #eae6e6;
+    color: black;
+    border-radius: 5px;
+}
+
+.navbar{
+    margin-top: 40px;
+    margin-left:810px;
+}
+.navbar1{
+    margin-top: 40px;
+    margin-left:780px;
+}
+.login{
+    background-color: #eae6e6;
+    color: black;
+    border-radius: 5px;
+}
+.welcome{
+    text-align: center;
+}
+.firstLine{
+    margin-top:190px;
+    font-size: 45px;
+    color: white;
+}
+.category{
+    margin-top:190px;
+    font-size: 35px;
+    color: white;
+}
+.category1{
+    margin-top:50px;
+    font-size: 35px;
+    color: white;
+}
+.goButton{
+    font-size: 25px;
+    padding:10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+.goButton:hover{
+    background-color: rgb(244, 187, 119);
+}
+.admin:hover,.customer:hover,.explore:hover{
+    background-color: aquamarine;
+}
+.explore{
+    margin-top:170px;
+    font-size: 35px;
+    padding:10px 20px;
+    border-radius: 15px;
+    width:300px;
+    cursor: pointer;
+}
+.admin{
+    font-size: 25px;
+    padding:10px 20px;
+    border-radius: 15px;
+    width:150px;
+    cursor: pointer;
+    margin-right:30px;
+    background-color: rgb(244, 187, 119);
+    color:black;
+}
+.customer{
+    margin-left: 20px;
+    font-size: 25px;
+    padding:10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: rgb(244, 187, 119);
+    color:black;
+}
+.feedback{
+    margin-top:80px;
+    font-size: 25px;
+    color: white;
+}
+
+.userFeedback,.userLogin{
+    display:flex;
+    align-items: center;
+    margin-left:600px;
+}
+.userReview,.userDishName,.userName,.password{
+    color:white;
+    font-size: 30px;
+}
+.userDishName2 select{
+    margin-left: 30px;
+    width:170px;
+    height:30px;
+}
+.userName2 input{
+    margin-left: 25px;
+    width:165px;
+    height:30px;
+}
+.password2 input{
+    margin-left: 43px;
+    width:165px;
+    height:30px;
+}
+.userReview2 input{
+    margin-left: 75px;
+    margin-top: 10px;
+    height:25px;
+    width:165px;
+}
+.feedbackSubmit,.loginSubmit{
+    margin:20px 10px;
+    font-size: 20px;
+    padding:5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width:100px;
+    background-color: rgb(244, 187, 119);
+    height:40px;
+
+}
+.feedbackSubmit:hover,.loginSubmit:hover,.dishSubmit:hover{
+    background-color: aquamarine;
+}
+
+#alertMessage{
+    margin-top: 10px;
+    font-size: 25px;
+    color: white;
+}
+.selectDish{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.selectDishTitle{
+    margin-top:70px;
+    margin-bottom: 40px;
+    font-size: 25px;
+    color: white;
+}
+.dishSubmit{
+    margin:30px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    padding:5px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width:170px;
+    background-color: rgb(244, 187, 119);
+    height:60px;
+}
+
+.dishImageAndReview{
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.dishImage img{
+    margin-left: 100px;
+    margin-top:10px;
+    width:500px;
+    height:500px;
+}
+.dishReview{
+    margin-top: 130px;
+    color:white;
+    text-align: left;
+    font-size:20px;
+}
+.dishReviewButton{
+    margin-top:20px;
+    margin-left: 120px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(244, 187, 119);
+}
+.dishReviewButton:hover{
+    background-color: aquamarine;
+}
+.invalidStmt{
+    font-size: 20px;
+    color: white;
+}
+.smileyImage{
+    margin-top:130px;
+}
+.goldStar{
+    width:30px;
+    height:30px;
+}
+.whiteStar{
+    width:30px;
+    height:30px;
+}
+
+.dishTable{
+    margin:20px 50px;
+}
+.dishDesc{
+    padding-left:30px;
+    padding-right: 20px;
+    text-align: justify;
+    font-size: 20px;
+    color:white;
+    margin-top:-20px;
+}
+.starDiv{
+    padding-left:30px;
+}
+.dishImageRating{
+    width:350px;
+    height:200px;
+}
+.tableRow{
+    background-color: rgb(122, 119, 119);
+}
+.rounded-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .rounded-table tr:first-child td {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .rounded-table tr:last-child td {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .rounded-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  h5{
+    margin-top:-5px;
+    padding-left: 30px;
+    font-size:25px;
+    color:white;
+  }
+  h4{
+    margin-top:50px;
+    text-align: center;
+    margin-left:-250px;
+    line-height: 2;
+  }
+  .nrHead{
+    font-size: 30px;
+    text-align: center;
+    margin-left:-250px;
+  }
+  .negativeReviewDish{
+    margin-top:5px;
+    text-align: center;
+    margin-left:-250px;
+  }
+  i{
+    margin-right:8px;
+  }

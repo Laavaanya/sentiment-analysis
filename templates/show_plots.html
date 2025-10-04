@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Fass</title>
+        <style>
+              body{
+                margin:0;
+                padding: 0;
+                background-image: url("{{ url_for('static', filename='background.avif') }}"); 
+                background-size: cover;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="'image">
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#"  class="login">Login</a></li>
+                    </ul>
+                
+            </nav>
+            </div>
+        </div>
+
+        <div class="welcome">
+            <div class="dishImageAndReview">
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename=img_data) }}" alt="Image">
+                </div>
+                <div class="dishReview">
+                    <P>Number of customers with negative review = {{data[1]}}</P>
+                    <P>Number of customers with neutral review = {{data[2]}}</P>
+                    <P>Number of customers with positive review = {{data[3]}}</P>
+                    {% if data[1]==0 %}
+                    <h4>There are no negative reviews <br> for this dish!</h4>
+                    {% endif %}
+                    {% if data[1]!=0 %}
+                    <form action="/negativeReviews" method="post">
+                        <button class="dishReviewButton" type="submit" name={{data[0]}} value={{data[0]}}>View negative reviews</button>
+                    </form>
+                    {% endif %}
+                </div>           
+            </div>
+            
+        </div>
+    </body>
+</html>
+       

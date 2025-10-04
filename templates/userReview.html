@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fass</title>
+    <style>
+          body{
+            margin:0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='background.avif') }}"); 
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="'image">
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#"  class="login">Login</a></li>
+                </ul>
+            
+        </nav>
+        </div>
+    </div>
+    <div class="welcome">
+        <div class="feedback">
+            <h1>
+                Customer Feedback
+            </h1>
+        </div>
+        <form action="#" method="post">
+            <div class="userFeedback">
+                <div class="userDishName">
+                    <p>Dish name</p>
+                </div>
+                <div class="userDishName2">
+                    <select name="dishName">
+                        <option value="Biryani">Biryani</option>            
+                        <option value="Dosa">Dosa</option>
+                        <option value="Idly">Idly</option>
+                        <option value="Noodles">Noodles</option>
+                        <option value="Poori">Poori</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Pongal">Pongal</option>
+                        <option value="Samosa">Samosa</option>
+                        <option value="Gobi65">Gobi65</option>
+                        <option value="Parotta">Parotta</option>
+                        <option value="Vada">Vada</option>
+                    </select>
+                </div>
+            </div>
+            <div class="userFeedback">
+                <div class="userReview">
+                    <p>Review</p>
+                </div>
+                <div class="userReview2">
+                    <input type="text" name="review"/><br>
+                </div>
+            </div>
+            <button class="feedbackSubmit" onclick="showAlert()" type="submit">submit</button>
+            <div id="alertMessage"></div>
+    
+        <script>
+            function showAlert() {
+                var alertDiv = document.getElementById('alertMessage');
+                alertDiv.innerHTML = 'Thanks for your Feedback!';
+            }
+        </script>
+        </form>
+
+    </div>
+   
+</body>
+</html>

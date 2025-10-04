@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Fass</title>
+        <style>
+              body{
+                margin:0;
+                padding: 0;
+                background-image: url("{{ url_for('static', filename='background.avif') }}"); 
+                background-size: cover;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="'image">
+            </div>
+            <div class="navbar1">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#"  class="login">Login</a></li>
+                    </ul>
+                
+            </nav>
+            </div>
+        </div>
+        <div class="dishTable">
+            <table class="rounded-table">
+                <tbody>
+                    {% for entry in data %}
+                    <tr class="tableRow">
+                        <!-- <td>{{ entry.dishname }}</td> -->
+                        {% if entry.dishname=='Dosa' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='DosaIMG.webp') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc">Choose from a wide range of dosa varieties, from classic masala dosa filled with flavorful potato filling to innovative creations like cheese dosa and paneer dosa.
+                                 Whatever your preference, our dosas are sure to tantalize your taste buds and leave you wanting seconds.</p>
+                        {% endif %}
+                        {% if entry.dishname=='Biryani' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='BiryaniIMG.jpeg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc"> Indulge in our mouthwatering biryani, served piping hot and bursting with aromatic spices. 
+                                Whether you prefer tender meat or flavorful vegetables, our biryani promises to tantalize your taste buds with every bite.
+                                Pair your biryani with a refreshing side of raita.</p>
+                        {% endif %}
+                        {% if entry.dishname=='Samosa' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='SamosaIMG.webp') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc">Bite into our golden, flaky pastry to reveal a tantalizing filling of spiced potatoes, peas, and aromatic herbs.
+                                Our samosas are generously seasoned with a blend of traditional spices, including cumin, coriander, and garam masala.</p>
+                        {% endif %}
+                        {% if entry.dishname=='Gobi65' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='Gobi65IMG.webp') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc">Our Gobi 65 features tender cauliflower florets coated in a light yet flavorful batter, fried to golden perfection.
+                                With each crunchy bite, experience the satisfying contrast of the crispy exterior and the tender cauliflower within.</p>
+                        {% endif %}
+                        {% if entry.dishname=='Parotta' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='ParottaIMG.avif') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc"> Delight in the soft, flaky layers of our freshly made parotta, expertly crafted to perfection.
+                                 Served hot off the griddle, each bite offers a symphony of flavors that will transport you to the streets of South India.
+                                 Complete your parotta experience with a side of our flavorful kurma or spicy curry. </p>
+                        {% endif %}
+                        {% if entry.dishname=='Poori' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='PooriIMG.jpg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc"> Treat yourself to our freshly fried pooris, golden-brown and perfectly puffed to perfection. 
+                                Enhance your poori experience with a side of our aromatic and flavorful potato masala. </p>
+                        {% endif %}
+                        {% if entry.dishname=='Noodles' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='NoodlesIMG.jpg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc"> Dive into a bowl of our freshly made noodles, cooked to perfection and infused with the rich and aromatic flavors of Asia.
+                                 Whether you prefer classic lo mein, spicy pad Thai, or savory yakisoba, our noodle dishes promise to transport you to culinary bliss with every bite.</p>
+                        {% endif %}
+                        {% if entry.dishname=='Pongal' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='PongalIMG.jpg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc"> Indulge in a hearty bowl of Pongal, made from freshly harvested rice and lentils, slow-cooked to creamy perfection. 
+                                Our Pongal is served piping hot, accompanied by a delectable array of side dishes including tangy sambar, creamy coconut chutney, and crispy vadai. </p>
+                        {% endif %}
+                        {% if entry.dishname=='Idly' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='IdlyIMG.jpg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc">Made from a batter of fermented rice and lentils, our idlis are a timeless classic that embodies the essence of South Indian cuisine.
+                                Enjoy our idlis piping hot, accompanied by a generous serving of tangy sambar and creamy coconut chutney.</p>
+                        {% endif %}
+                        {% if entry.dishname=='Pizza' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='PizzaIMG.jpg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc">Sink your teeth into a slice of pizza paradise with our handcrafted dough and topped with the finest quality cheeses, savory sauces.
+                                Create your own culinary masterpiece with our wide selection of toppings, fresh veggies,  meats, and cheeses.</p>
+                        {% endif %}
+                        {% if entry.dishname=='Pasta' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='PastaIMG.jpg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc"> Experience the authentic flavors of Italy with our handcrafted pasta, made fresh in-house using traditional techniques and the finest quality ingredients. 
+                                From silky strands of spaghetti to delicate ravioli, each dish is a celebration of Italian culinary heritage. </p>
+                        {% endif %}
+                        {% if entry.dishname=='Vada' %}
+                        <td><img class="dishImageRating" src="{{ url_for('static', filename='VadaIMG.jpg') }}" alt="'image"></td>
+                        <td>
+                            <h5>{{entry.dishname}}</h5>
+                            <p class="dishDesc">Bite into our freshly fried vadas, crafted with a blend of lentils, spices, and herbs, and experience the authentic flavors of South India. 
+                                 Our vadas are seasoned to perfection with a medley of aromatic spices, including cumin, coriander, and curry leaves. </p>
+                        {% endif %}
+                        {% if entry.rating>=1.0 and entry.rating<1.5 %}
+                        <div class="starDiv">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='whiteStar' src="{{ url_for('static', filename='white star.png') }}" alt="image">
+                                 <img class='whiteStar' src="{{ url_for('static', filename='white star.png') }}" alt="image">
+                                 <img class='whiteStar' src="{{ url_for('static', filename='white star.png') }}" alt="image">
+                                </div>
+                                 {% endif %}
+                                 {% if entry.rating>=1.5 and entry.rating<2.0 %}
+                                 <div class="starDiv">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='whiteStar' src="{{ url_for('static', filename='white star.png') }}" alt="image">
+                                 <img class='whiteStar' src="{{ url_for('static', filename='white star.png') }}" alt="image">
+                                 </div>
+                                 {% endif %}
+                                 {% if entry.rating>=2.0 and entry.rating<2.5 %}
+                                 <div class="starDiv">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='whiteStar' src="{{ url_for('static', filename='white star.png') }}" alt="image">
+                                 </div>
+                                 {% endif %}
+                                 {% if entry.rating>=2.5 and entry.rating <=3.0 %}
+                                 <div class="starDiv">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 <img class='goldStar' src="{{ url_for('static', filename='Gold star.png') }}" alt="image">
+                                 </div>
+                        {% endif %}
+
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <div class="black"></div>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    
+        </div>
+       
+    </body>
+ </html>

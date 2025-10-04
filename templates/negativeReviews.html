@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <title>Fass</title>
+        <style>
+              body{
+                margin:0;
+                padding: 0;
+                background-image: url("{{ url_for('static', filename='background.avif') }}"); 
+                background-size: cover;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="'image">
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#"  class="login">Login</a></li>
+                    </ul>
+                
+            </nav>
+            </div>
+        </div>
+
+        <div class="welcome">
+            <div class="dishImageAndReview">
+                {% if name=='Biryani' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='BiryaniIMG.jpeg') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Dosa' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='DosaIMG.webp') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Idly' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='IdlyIMG.jpg') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Gobi65' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='Gobi65IMG.webp') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Noodles' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='NoodlesIMG.jpg') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Parotta' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='ParottaIMG.avif') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Pasta' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='PastaIMG.jpg') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Pizza' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='PizzaIMG.jpg') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Pongal' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='PongalIMG.jpg') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Poori' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='PooriIMG.jpg') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Samosa' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='SamosaIMG.webp') }}" alt="Image">
+                </div>
+                {% endif %}
+                {% if name=='Vada' %}
+                <div class="dishImage">
+                    <img src="{{ url_for('static', filename='VadaIMG.jpg') }}" alt="Image">
+                </div>
+                {% endif %}
+                <div class="dishReview">
+                    <h2 class="nrHead">{{name}}</h2>
+                    <h4 class="negativeReviewDish">Negative Reviews</h4>
+                    {% for entry in data %}
+                    <P><i class="fa-regular fa-circle-check" style="color: #63E6BE;"></i>{{entry}}</P>
+                    {% endfor %}
+                </div>           
+            </div>
+            
+        </div>
+    </body>
+</html>
