@@ -30,7 +30,14 @@ organizations to make data-driven decisions and prioritize areas for product enh
 8) matplotlib – Generates and saves bar charts of dish ratings.
 9) os – Handles file paths and environment settings.
 
-**MODEL:**
+**MODEL USED:**
 
 cardiffnlp/twitter-roberta-base-sentiment-latest
 -  Used to convert reviews into sentiment-based ratings (1–3).
+
+
+**WORKING MODEL DEMO:**
+
+
+https://github.com/user-attachments/assets/cd1e12f1-48a5-4668-bb66-48128369c6a1
+
